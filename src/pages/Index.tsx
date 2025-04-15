@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import {
@@ -36,7 +35,7 @@ const Index = () => {
             </div>
             <div className="md:w-1/2 flex justify-center md:justify-end animate-scale-in">
               <img 
-                src="photo-1459767129954-1b1c1f9b9ace"
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&auto=format&fit=crop&q=60"
                 alt="Modern hostel building"
                 className="rounded-lg shadow-xl w-full max-w-lg object-cover h-80"
               />
