@@ -25,6 +25,8 @@ import StudentMealQR from "@/pages/StudentMealQR";
 import OutpassForm from "@/pages/OutpassForm";
 import ComplaintForm from "@/pages/ComplaintForm";
 import MessMenu from "@/pages/MessMenu";
+import RoomChangeRequest from "@/pages/RoomChangeRequest";
+import VisitorLog from "@/pages/VisitorLog";
 
 // Error Pages
 import NotFound from "@/pages/NotFound";
@@ -59,6 +61,8 @@ const App = () => (
               <Route path="outpass" element={<OutpassForm />} />
               <Route path="complaints" element={<ComplaintForm />} />
               <Route path="mess-menu" element={<MessMenu />} />
+              <Route path="room-change" element={<RoomChangeRequest />} />
+              <Route path="visitors" element={<VisitorLog />} />
               {/* Add more dashboard pages here */}
             </Route>
 

@@ -1,6 +1,6 @@
 
-import { QrCode } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { QRCodeSVG } from 'qrcode.react';
 
 export const QRCodeDisplay = ({ 
   studentId, 
@@ -9,8 +9,8 @@ export const QRCodeDisplay = ({
   studentId: string; 
   studentName: string; 
 }) => {
-  // In a real app, this would be an actual QR code generator
-  // using a library like 'qrcode.react'
+  // Generate a unique QR code value that includes student ID and current date
+  const qrValue = `HOSTEL_ZENITH_STUDENT:${studentId}:${new Date().toISOString().split('T')[0]}`;
   
   return (
     <Card className="overflow-hidden">
@@ -21,7 +21,14 @@ export const QRCodeDisplay = ({
       <CardContent className="flex flex-col items-center justify-center p-6">
         <div className="w-64 h-64 border-2 border-gray-300 rounded-lg flex flex-col items-center justify-center p-4 bg-white">
           <div className="w-full h-full border-8 border-hostel-purple flex items-center justify-center">
-            <QrCode size={150} strokeWidth={1} />
+            <QRCodeSVG 
+              value={qrValue}
+              size={150}
+              bgColor={"#ffffff"}
+              fgColor={"#000000"}
+              level={"H"}
+              includeMargin={true}
+            />
           </div>
         </div>
         

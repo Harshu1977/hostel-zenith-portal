@@ -2,13 +2,13 @@
 import { useState } from 'react';
 import { DashboardNavbar } from '@/components/DashboardNavbar';
 import { DashboardSidebar } from '@/components/DashboardSidebar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
-import { Navigate } from 'react-router-dom';
 
 export const DashboardLayout = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const { isAuthenticated, loading } = useAuth();
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
@@ -23,9 +23,9 @@ export const DashboardLayout = () => {
     );
   }
 
-  // If not authenticated, redirect to login
+  // If not authenticated, redirect to login with current location as return URL
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to={`/login?returnUrl=${encodeURIComponent(location.pathname)}`} replace />;
   }
 
   return (
