@@ -20,7 +20,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-hostel-purple to-hostel-blue bg-clip-text text-transparent">
-                Simplify Hostel Life with Zenith
+                Simplify Hostel Life with Gen
               </h1>
               <p className="text-lg text-gray-700 mb-8">
                 The comprehensive digital solution for students, hostel wardens, and mess staff to streamline hostel operations and enhance communication.
@@ -36,8 +36,8 @@ const Index = () => {
             </div>
             <div className="md:w-1/2 flex justify-center md:justify-end animate-scale-in">
               <img 
-                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=800&auto=format&fit=crop&q=80" 
-                alt="College students" 
+                src="photo-1459767129954-1b1c1f9b9ace"
+                alt="Modern hostel building"
                 className="rounded-lg shadow-xl w-full max-w-lg object-cover h-80"
               />
             </div>
@@ -126,7 +126,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Hostel Experience?</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Join thousands of students and administrators already using Hostel Zenith.
+            Join thousands of students and administrators already using Gen.
           </p>
           <div className="flex justify-center space-x-4">
             <Button asChild size="lg" className="bg-white text-hostel-purple hover:bg-gray-100">
@@ -135,6 +135,20 @@ const Index = () => {
             <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-hostel-purple-dark">
               <Link to="/login">Login</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer with Contact Information */}
+      <section className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
+            <div className="space-y-2 text-gray-600">
+              <p>Mobile: +91 9769884860</p>
+              <p>Email: hostelgen@mescoe.org</p>
+              <p>Address: Modern Education Society Wadia College of Engineering Pune 411001</p>
+            </div>
           </div>
         </div>
       </section>
